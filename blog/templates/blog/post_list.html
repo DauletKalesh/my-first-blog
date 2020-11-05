@@ -6,16 +6,12 @@
         <div>
             <h1><a href="/">Dauka's blog</a></h1>
         </div>
+        {% for post in posts%}
         <div>
-            <p>Published at 05.11.2020 01:11 AM</p>
-            <h2><a href="">My first post</a></h2>
-            <p>vgupnegvp;oewirhvptbrn;sorhbiebf  gp er hgpirehga yuv</p>
+            <p>published: {{post.published_date}}  </p>
+            <h1><a href=""> {{ post.title }} </a></h1>
+            <p> {{post.text|linebreaksbr }} </p>
         </div>
-        <div>
-            <p>Published at 05.11.2020 01:11 AM</p>
-            <h2><a href="">My second post</a></h2>
-            <p>vgupnegvp;oewirhvptbrn;sorhbiebf  gp er hgpirehga yuv</p>
-        </div>
-
+        {% endfor %}
     </body>
 </html>
